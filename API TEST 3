@@ -1,0 +1,61 @@
+POST https://demo.docusign.net/restapi/v2.1/accounts/22397666/envelopes
+{
+    "emailSubject": "This is a test envelope",
+    "status": "sent",
+    "compositeTemplates": [
+        {
+            "serverTemplates": [
+                {
+                    "sequence": "1", 
+                    "templateId": "12c10806-57dd-4362-87e2-2c17854d9c52"
+                }
+            ],
+            "inlineTemplates": [
+                {
+                    "sequence": "1",
+                    "recipients": {
+                        "signers": [
+                            {
+                                "email": "johndoe@test.test",
+                                "name": "John Doe",
+                                "recipientId": "1"
+                            },
+                            {
+                                "email": "janedoe@test.test",
+                                "name": "Jane Doe",
+                                "recipientId": "2"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "serverTemplates": [
+                {
+                    "sequence": "1",
+                    "templateId": "7e7704f0-dd13-461c-856e-ca0e28db8bb5"
+                }
+            ],
+            "inlineTemplates": [
+                {
+                    "sequence": "2",
+                    "recipients": {
+                        "signers": [
+                            {
+                                "email": "johndoe@test.test",
+                                "name": "John Doe",
+                                "recipientId": "1"
+                            },
+                            {
+                                "email": "janedoe@test.test",
+                                "name": "Jane Doe",
+                                "recipientId": "2"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
